@@ -1,0 +1,92 @@
+// colors
+$black: #000000;
+$white: #ffffff;
+$green: #00FF66;
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Promo {
+    height: 450px;
+    display: flex;
+    margin: 60px 5%;
+    background-color: $black;
+
+    .Promo-Left {
+        width: 45%;
+        height: 100%;
+        padding-left: 3%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+
+        .Tag {
+            color: $green;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .Title {
+            font-size: 50px;
+            font-weight: 500;
+            color: $white;
+        }
+
+        .Time {
+            height: 70px;
+            margin: 25px 0;
+
+            ol {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                gap: 5%;
+
+                li {
+                    list-style: none;
+                    @include flex;
+                    flex-direction: column;
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                    background-color: $white;
+                    font-size: 13px;
+                    text-align: center;
+
+                    span {
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .Butt {
+            button {
+                background-color: $green;
+                color: $white;
+                border: none;
+                outline: none;
+                height: 45px;
+                width: 33%;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 15px;
+                font-family: 500;
+                letter-spacing: 2px;
+            }
+        }
+
+    }
+
+    .Promo-Right {
+        width: 55%;
+        height: 100%;
+        @include flex;
+        background: radial-gradient(#181818, $black);
+    }
+}

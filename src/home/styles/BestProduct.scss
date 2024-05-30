@@ -1,0 +1,145 @@
+// colors
+$black: #000000;
+$white: #ffffff;
+$orange: #DB4444;
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Best-Product {
+    height: 500px;
+    padding: 0 5%;
+    margin-top: 50px;
+    padding-bottom: 100px;
+
+    .Best-Top {
+        height: 40%;
+        display: flex;
+        border-top: 1px solid #b1afaf;
+        padding-top: 50px;
+
+
+        .Top-Left {
+            width: 50%;
+
+            .Up {
+                display: inline-block;
+                height: 50%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                color: $orange;
+                font-size: 20px;
+                font-weight: 600;
+
+                .Box {
+                    height: 60%;
+                    width: 25px;
+                    background-color: $orange;
+                    border-radius: 5px;
+                    display: inline-block;
+                    margin-right: 18px;
+                }
+            }
+
+            .Down {
+                display: inline-block;
+                height: 50%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                font-size: 35px;
+                font-weight: 500;
+            }
+        }
+
+        .Top-Right {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            button {
+                height: 50px;
+                width: 25%;
+                background-color: $orange;
+                color: $white;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .Best-Bottom {
+        height: 60%;
+        margin-top: 50px;
+
+        ol {
+            height: 100%;
+            width: 100%;
+            display: flex;
+
+            li {
+                list-style: none;
+                height: 100%;
+                width: 25%;
+                margin-right: 2%;
+                cursor: pointer;
+
+                .Product-Top {
+                    height: 70%;
+
+                    .Img-Section {
+                        width: 100%;
+                        height: 100%;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-color: #F5F5F5;
+                        display: flex;
+                        justify-content: flex-end;
+
+                        .Img-Section-Right {
+                            width: 30px;
+                            height: 100%;
+                            margin-right: 3%;
+                            padding-top: 10px;
+
+                            img {
+                                cursor: pointer;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+
+                .Product-Bottom {
+                    height: 30%;
+                    padding-top: 10px;
+
+                    .Product-Name {
+                        font-weight: bold;
+                    }
+
+                    .Product-Price {
+                        font-size: 15px;
+                        color: $orange;
+                        padding: 5px 0;
+
+                        span {
+                            color: #a7a5a5;
+                            text-decoration: line-through;
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
